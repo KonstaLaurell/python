@@ -40,15 +40,11 @@ def main():
     enemy = [rocket, window_width+299, random.randint(0,window_height)]
     hahmot = [kissahahmo,enemy]
     enemyt = [enemy]
-    smurf_rect = pygame.draw.rect(smurf,(0,255,0), pygame.Rect(0,0,244/1.5,407/1.5),2)
-    rocket_rect = pygame.draw.rect(rocket,(255,0,0), pygame.Rect(0,0,299,199),2)
-    collide = pygame.Rect.colliderect(rocket_rect,smurf_rect)
+
+
     while True:
 
-
-        if collide:
-            print("collide")
-        enemy[1] = enemy[1] - 4
+        enemy[1] = enemy[1] 
         clock.tick(120)
         tapahtuma = pygame.event.poll()
         if tapahtuma.type == pygame.QUIT:
