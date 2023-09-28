@@ -105,7 +105,7 @@ def main():
             enem[1].move_ip(-enemy_speed, 0)  
             if enem[1].right <= 0:
                 points += 1
-                enemy_speed = enemy_speed *1.15
+                enemy_speed = enemy_speed *1.1
                 enem[1].center = (window_width + 400, random.randint(0, window_height))
     if game_over:
         current_date = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -125,7 +125,7 @@ def main():
         textRect = text.get_rect()
         textRect2 = text2.get_rect()
         textRect.center = (window_width // 2, window_height // 2)
-        textRect2.center = ((window_width // 2), window_height // 2+20)
+        textRect2.center = ((window_width // 2), window_height // 2+32)
         naytto.blit(text, textRect)
         naytto.blit(text2, textRect2)
         pygame.display.update()
